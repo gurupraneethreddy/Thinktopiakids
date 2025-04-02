@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-audio-player {
+    background: linear-gradient(135deg, #7e22ce, #9333ea) !important;
+    /* Purple gradient */
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 0.5rem;
+}
+
+.custom-audio-player .rhap_header,
+.custom-audio-player .rhap_progress-section,
+.custom-audio-player .rhap_controls-section,
+.custom-audio-player .rhap_volume-controls {
+    background: transparent !important;
+}
+
+.custom-audio-player .rhap_time,
+.custom-audio-player .rhap_button-clear {
+    color: #fff !important;
+}
+
+.custom-audio-player .rhap_progress-filled {
+    background: #fff !important;
+}
+
+/* Custom WebKit Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    /* Light grey track */
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #7e22ce, #9333ea);
+    /* Purple gradient */
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+    /* Matching the track background */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #6b21a8, #7c3aed);
+    /* Darker gradient on hover */
+}

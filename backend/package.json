@@ -23,6 +23,6 @@
     "sequelize": "^6.37.5"
   },
   "devDependencies": {
-  "supertest": "^6.3.3"
+    "supertest": "^6.3.3"
   }
 }

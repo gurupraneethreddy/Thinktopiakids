@@ -23,19 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./backend  # Ensure package.json is inside backend/
+        working-directory: ./backend
 
       - name: Run tests
-        run: npm test
-        working-directory: ./backend  # Ensure tests exist in backend
-        env:
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_HOST: ${{ secrets.DB_HOST }}
-          DB_NAME: ${{ secrets.DB_NAME }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_PORT: ${{ secrets.DB_PORT }}
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
-          EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+        run: npx jest --detectOpenHandles --forceExit
+        working-directory: ./backend
